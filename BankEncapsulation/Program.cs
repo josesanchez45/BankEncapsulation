@@ -8,9 +8,9 @@ Console.WriteLine();
 
 Console.WriteLine("How much Would you like to deposit?");
 
-var userDeposit =double.Parse(Console.ReadLine());
+var userDeposit = Double.TryParse(Console.ReadLine(), out var userMoney);
 
-account.Deposit(userDeposit);
+account.Deposit(userMoney);
 
 Console.WriteLine("Your new balance is: ");
 
